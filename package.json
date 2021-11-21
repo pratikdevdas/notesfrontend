@@ -18,7 +18,8 @@
     "eject": "react-scripts eject",
     "server": "json-server -p3001 --watch db.json",
     "lint": "eslint .",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -41,6 +42,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",
+    "cypress": "^9.0.0",
     "eslint-plugin-jest": "^24.7.0",
     "json-server": "^0.16.3"
   },
