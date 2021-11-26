@@ -10,7 +10,7 @@ import NoteForm from './components/NoteForm'
 
 const App = () => {
   const [notes, setNotes] = useState([])
-  const [showAll, setShowAll] = useState(false)
+  const [showAll, setShowAll] = useState(true)
   const [errorMessage, setErrorMessage] = useState(null)
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -26,6 +26,7 @@ const App = () => {
 
   useEffect(() => {
     const loggedUserJSON = window.localStorage.getItem('loggedNoteappUser')
+    // window.localStorage.removeItem('loggedNoteappUser')
     if(loggedUserJSON) {
       const user = JSON.parse(loggedUserJSON)
       setUser(user)
