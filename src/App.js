@@ -98,7 +98,7 @@ const App = () => {
   //we dont use curly bracket beacuse it returns only one form element i.e its the shortform arrow function
   const loginForm = () => (
 
-    <Togglable buttonLabel='login'>
+    <Togglable buttonLabel='log in'>
       <LoginForm
         username={username}
         password={password}
@@ -115,7 +115,7 @@ const App = () => {
     return (
       <Togglable buttonLabel="new note" ref={noteFormRef}>
         <NoteForm createNote={addNote}/>
-      </Togglable>    )
+      </Togglable>)
   }
 
 
