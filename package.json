@@ -19,7 +19,8 @@
     "server": "json-server -p3001 --watch db.json",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "test:e2e": "cypress run"
   },
   "eslintConfig": {
     "extends": [
