@@ -53,31 +53,31 @@ describe('Note app', function() {
 
     describe('and a note exists', function () {
       describe('a several note exists', function(){
-      beforeEach(function () {
-        cy.createNote({
-          content:'first note',
-          important:false
+        beforeEach(function () {
+          cy.createNote({
+            content:'first note',
+            important:false
+          })
+          cy.createNote({
+            content:'second note',
+            important:false
+          })
+          cy.createNote({
+            content:'third',
+            important:false
+          })
         })
-        cy.createNote({
-          content:'second note',
-          important:false
-        })
-        cy.createNote({
-          content:'third',
-          important:false
-        })
-      })
 
-      it('one of those can be made important', function () {
-        cy.contains('second note')
-        .parent().find('button')
-        .as('theButton')
-        .click()
+        it('one of those can be made important', function () {
+          cy.contains('second note')
+            .parent().find('button')
+            .as('theButton')
+            .click()
 
-        cy.get('@theButton').click()
-        cy.get('@theButton').should('contain', 'make not important')
+          cy.get('@theButton').click()
+          cy.get('@theButton').should('contain', 'make not important')
+        })
       })
     })
   })
-})
 })
